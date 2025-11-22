@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="setup-screen" class="screen active">
+    <div class="logo-container">
+        <h2>Game Setup</h2>
+    </div>
+
+    <div class="setup-form glass-panel">
+        <div class="form-group">
+            <label>Number of Players</label>
+            <div class="player-count-selector">
+                <button class="count-btn" data-value="1">1</button>
+                <button class="count-btn active" data-value="2">2</button>
+                <button class="count-btn" data-value="3">3</button>
+                <button class="count-btn" data-value="4">4</button>
+                <button class="count-btn" data-value="5">5</button>
+                <button class="count-btn" data-value="6">6</button>
+            </div>
+        </div>
+
+        <div id="player-names-container" class="form-group">
+            <!-- Player name inputs injected here -->
+        </div>
+
+        <div class="form-group">
+            <label>Category</label>
+            <select id="category-select">
+                <option value="General Knowledge">General Knowledge</option>
+                <option value="Science">Science</option>
+                <option value="History">History</option>
+                <option value="Technology">Technology</option>
+                <option value="Philosophy">Philosophy</option>
+                <option value="Pop Culture">Pop Culture</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Difficulty</label>
+            <select id="difficulty-select">
+                <option value="Easy">Easy</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+        </div>
+
+        <button id="start-game-btn" class="primary-btn">START GAME</button>
+    </div>
+</section>
+{% endblock %}

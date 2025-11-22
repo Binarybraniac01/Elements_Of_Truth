@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="loading-screen" class="screen active">
+    <div class="loading-content glass-panel">
+        <div class="spinner-large"></div>
+        <h2>Generating Questions...</h2>
+        <p id="loading-status">Generating Questions...</p>
+        <div class="progress-bar">
+            <div class="progress-fill" id="loading-progress"></div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="results-screen" class="screen active">
+    <div class="results-container glass-panel">
+        <h1>GAME OVER</h1>
+        <div class="winner-display">
+            <span class="trophy">🏆</span>
+            <h2 id="winner-name">Player 1 Wins!</h2>
+            <p class="final-score" id="winner-score">Score: 45</p>
+        </div>
+
+        <div class="final-standings">
+            <h3>Final Standings</h3>
+            <ul id="final-scores-list">
+                <!-- Final scores -->
+            </ul>
+        </div>
+
+        <button id="restart-btn" class="primary-btn">PLAY AGAIN</button>
+    </div>
+</section>
+{% endblock %}

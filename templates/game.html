@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="game-screen" class="screen active">
+    <header class="game-header">
+        <div class="round-indicator">Round <span id="current-round">1</span>/10</div>
+        <div class="category-badge" id="game-category-display">Category</div>
+    </header>
+
+    <main class="game-board">
+        <div class="question-card glass-panel perspective-card">
+            <div id="question-content">
+                <h2 id="question-text">Waiting for question...</h2>
+                <div class="options-grid">
+                    <button class="option-btn" data-option="A"><span class="opt-label">A</span> <span
+                            class="opt-text">Option A</span></button>
+                    <button class="option-btn" data-option="B"><span class="opt-label">B</span> <span
+                            class="opt-text">Option B</span></button>
+                    <button class="option-btn" data-option="C"><span class="opt-label">C</span> <span
+                            class="opt-text">Option C</span></button>
+                    <button class="option-btn" data-option="D"><span class="opt-label">D</span> <span
+                            class="opt-text">Option D</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="player-action-area glass-panel" id="player-action-area">
+            <div class="current-player-info">
+                <span class="turn-label">Current Turn</span>
+                <h3 id="current-player-name">Player 1</h3>
+            </div>
+
+            <div class="confidence-selector">
+                <p>Select Confidence Token</p>
+                <div class="token-grid" id="token-grid">
+                    <!-- Tokens 1-10 injected by JS -->
+                </div>
+            </div>
+
+            <button id="confirm-turn-btn" class="action-btn" disabled>CONFIRM SELECTION</button>
+        </div>
+    </main>
+
+    <aside class="scoreboard glass-panel">
+        <h3>Scores</h3>
+        <ul id="score-list">
+            <!-- Scores injected by JS -->
+        </ul>
+    </aside>
+</section>
+
+<!-- Reveal Popup -->
+<div id="reveal-popup" class="popup-overlay hidden">
+    <div class="popup-content glass-panel">
+        <h3>The Truth Is...</h3>
+        <div class="correct-option-large" id="popup-correct-option">A</div>
+        <p id="popup-explanation">Explanation goes here.</p>
+        <button id="popup-next-btn" class="primary-btn">NEXT ROUND</button>
+    </div>
+</div>
+{% endblock %}
