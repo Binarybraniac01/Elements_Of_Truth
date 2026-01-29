@@ -7,22 +7,7 @@
     </div>
 
     <div class="setup-form glass-panel">
-        <div class="form-group">
-            <label>Number of Players</label>
-            <div class="player-count-selector">
-                <button class="count-btn" data-value="1">1</button>
-                <button class="count-btn active" data-value="2">2</button>
-                <button class="count-btn" data-value="3">3</button>
-                <button class="count-btn" data-value="4">4</button>
-                <button class="count-btn" data-value="5">5</button>
-                <button class="count-btn" data-value="6">6</button>
-            </div>
-        </div>
-
-        <div id="player-names-container" class="form-group">
-            <!-- Player name inputs injected here -->
-        </div>
-
+        <!-- Category & Difficulty FIRST - triggers prefetch while user fills names -->
         <div class="form-group">
             <label>Category</label>
             <select id="category-select">
@@ -42,6 +27,23 @@
                 <option value="Medium" selected>Medium</option>
                 <option value="Hard">Hard</option>
             </select>
+        </div>
+
+        <!-- Player setup AFTER - gives time for prefetch to complete -->
+        <div class="form-group">
+            <label>Number of Players</label>
+            <div class="player-count-selector">
+                <button class="count-btn" data-value="1">1</button>
+                <button class="count-btn active" data-value="2">2</button>
+                <button class="count-btn" data-value="3">3</button>
+                <button class="count-btn" data-value="4">4</button>
+                <button class="count-btn" data-value="5">5</button>
+                <button class="count-btn" data-value="6">6</button>
+            </div>
+        </div>
+
+        <div id="player-names-container" class="form-group">
+            <!-- Player name inputs injected here -->
         </div>
 
         <button id="start-game-btn" class="primary-btn">START GAME</button>
